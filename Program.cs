@@ -15,15 +15,22 @@ namespace OOP_sem2_week3_Q1
             
             Console.WriteLine("Enter your zip code");
             string input = Console.ReadLine();
-
+            bool flag = true;
             foreach (string i in zipCodes)
             {
                 if (i.Equals(input))
                 {
                     Console.WriteLine("We deliver to your city");
+                    flag = false;   
+                    break;
                 }
             }
-            Console.WriteLine("Sorry, we dont deliver to your city yet");
+
+
+            if (flag)
+            {
+                Console.WriteLine("Sorry we don't deliver to your city");
+            }
         }
     }
 }
